@@ -1,11 +1,13 @@
 package com.example.ourgroceries.model;
 
+import android.view.View;
+
 public class DiscountedProducts {
 
     Integer id;
-    String imageurl;
+    int imageurl;
 
-    public DiscountedProducts(Integer id, String imageurl) {
+    public DiscountedProducts(Integer id, int imageurl) {
         this.id = id;
         this.imageurl = imageurl;
     }
@@ -19,11 +21,11 @@ public class DiscountedProducts {
         this.id = id;
     }
 
-    public String getImageurl() {
+    public int getImageurl() {
         return imageurl;
     }
 
-    public void setImageurl(String imageurl) {
+    public void setImageurl(int imageurl) {
         this.imageurl = imageurl;
     }
 }
