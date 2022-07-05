@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     SaleItemsAdapter saleItemsAdapter;
     List<SaleItems> saleItemsList;
 
-    ImageView allCategory,mainCart, setting;
+    ImageView allCategory,mainCart, setting, branch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +46,20 @@ public class MainActivity extends AppCompatActivity {
         saleItemsRecycler= findViewById(R.id.saleRecycler);
         mainCart=findViewById(R.id.mainCart);
         setting= findViewById(R.id.main_setting);
+        branch= findViewById(R.id.main_branch);
 //>>>>>>> Stashed changes
 
 //        setting.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                Intent i = new Intent(MainActivity.this, SettingActivity.class);
+//                startActivity(i);
+//            }
+//        });
+//        branch.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(MainActivity.this, BranchList.class );
 //                startActivity(i);
 //            }
 //        });
