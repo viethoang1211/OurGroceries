@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OurGroceries</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_maps">MapsActivity</string>
+</resources>
