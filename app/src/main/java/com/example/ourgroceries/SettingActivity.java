@@ -1,6 +1,7 @@
 package com.example.ourgroceries;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,9 +34,15 @@ public class SettingActivity extends AppCompatActivity {
         // Is the switch on?
         boolean on = ((Switch) view).isChecked();
         if (on) {
-            // On
+            AppCompatDelegate
+                    .setDefaultNightMode(
+                            AppCompatDelegate
+                                    .MODE_NIGHT_YES);
         } else {
-            // Off
+            AppCompatDelegate
+                    .setDefaultNightMode(
+                            AppCompatDelegate
+                                    .MODE_NIGHT_NO);
         }
     }
     public void onMusicClicked(View view) {
@@ -59,6 +66,7 @@ public class SettingActivity extends AppCompatActivity {
         intent.putExtra(BranchInfo.EXTRA_MESSAGE,x);
         stopService(intent);
     }
+
     public void onLogOut(View view) {
         gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

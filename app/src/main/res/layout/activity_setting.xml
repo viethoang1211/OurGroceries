@@ -29,8 +29,6 @@
         android:textSize="30dp"
         android:drawableLeft="@drawable/ic_baseline_nights_stay_24"
         android:drawablePadding="20dp"
-        android:textOn="On"
-        android:textOff="Off"
         android:onClick="onDarkmodeClicked"
         />
     <Switch
@@ -42,8 +40,6 @@
         android:textSize="30dp"
         android:drawableLeft="@drawable/ic_baseline_music_note_24"
         android:drawablePadding="20dp"
-        android:textOn="On"
-        android:textOff="Off"
         android:onClick="onMusicClicked"
 
         />

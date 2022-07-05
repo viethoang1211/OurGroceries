@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:layout_width="match_parent" >
+    android:layout_width="match_parent"
+    android:background="@color/backgroundColor">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -21,10 +22,11 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans"
         android:text="VH Groceries"
-        android:textColor="#1B1818"
+        android:textColor="@color/textColor"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <ImageView
         android:id="@+id/main_setting"
@@ -46,7 +48,8 @@
         android:lineSpacingExtra="4dp"
         android:text="Shop groceries items through VH grocery app\nonline super market store at best prices."
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:textColor="@color/textColor"/>
 
     <EditText
         android:id="@+id/search_bar"
@@ -65,7 +68,8 @@
         android:paddingStart="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:textColor="@color/textColor"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/discountedRecycler"
@@ -88,7 +92,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans"
         android:text="Top Discounted Items"
-        android:textColor="#DD3F3F"
+        android:textColor="@color/textColor"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/search_bar"
         app:layout_constraintTop_toBottomOf="@+id/search_bar" />
@@ -101,7 +105,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans"
         android:text="Categories"
-        android:textColor="#F44336"
+        android:textColor="@color/textColor"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/discountedRecycler" />
@@ -137,7 +141,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans"
         android:text="Sale Items"
-        android:textColor="#F44336"
+        android:textColor="@color/textColor"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/categoryRecycler" />
