@@ -14,10 +14,13 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ourgroceries.CartView;
+import com.example.ourgroceries.GlobalClass;
 import com.example.ourgroceries.ItemDetails;
 import com.example.ourgroceries.R;
 import com.example.ourgroceries.model.SaleItems;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CartItemsAdapter extends RecyclerView.Adapter<CartItemsAdapter.CartItemsViewHolder> {
@@ -43,6 +46,19 @@ public class CartItemsAdapter extends RecyclerView.Adapter<CartItemsAdapter.Cart
         holder.name.setText(saleItemsList.get(position).getName());
         holder.price.setText(new StringBuilder().append("$ ").append(saleItemsList.get(position).getPrice()).toString());
         holder.img.setImageResource(saleItemsList.get(position).getDetailedImageUrl());
+
+        holder.remove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                List<SaleItems> si= new ArrayList<>();
+                si = ((GlobalClass)context.getApplicationContext()).getItemInCart();
+                si.remove(position);
+                ((GlobalClass)context.getApplicationContext()).setItemInCart(si);
+                Intent i = new Intent(context, CartView.class);
+                context.startActivity(i);
+
+            }
+        });
     }
 
     @Override
@@ -53,12 +69,13 @@ public class CartItemsAdapter extends RecyclerView.Adapter<CartItemsAdapter.Cart
     public static class CartItemsViewHolder extends RecyclerView.ViewHolder{
 
         TextView name, price;
-        ImageView img;
+        ImageView img, remove;
         public CartItemsViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.cart_item_name);
             price= itemView.findViewById(R.id.cart_item_price);
             img=itemView.findViewById(R.id.cart_item_image);
+            remove = itemView.findViewById(R.id.cart_item_remove);
         }
     }
 }

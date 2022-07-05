@@ -92,7 +92,7 @@
         android:fontFamily="sans-serif-black"
         android:padding="8sp"
         android:paddingStart="8sp"
-        android:text="ADD TO CART"
+        android:text="ADD TO CART  "
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

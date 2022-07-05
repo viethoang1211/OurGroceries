@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +24,8 @@ public class CartView extends AppCompatActivity {
     CartItemsAdapter cartItemsAdapter;
     ImageView back;
     List<SaleItems> cartItems;
-
+    TextView totalPrice;
+    int x ;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +45,12 @@ public class CartView extends AppCompatActivity {
 
         cartItems=new ArrayList<>();
         cartItems = ((GlobalClass)this.getApplication()).getItemInCart();
-
+        totalPrice = findViewById(R.id.totalPrice);
+        x=0;
+        for (SaleItems s: cartItems){
+            x= x+ Integer.parseInt(s.getPrice());
+        }
+        totalPrice.setText("$ "+ String.valueOf(x));
 
         setCartRecycler(cartItems);
     }
