@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ourgroceries.CartView;
 import com.example.ourgroceries.GlobalClass;
 import com.example.ourgroceries.ItemDetails;
+import com.example.ourgroceries.LoginActivity;
 import com.example.ourgroceries.R;
 import com.example.ourgroceries.model.SaleItems;
 
@@ -54,6 +56,7 @@ public class CartItemsAdapter extends RecyclerView.Adapter<CartItemsAdapter.Cart
                 si = ((GlobalClass)context.getApplicationContext()).getItemInCart();
                 si.remove(position);
                 ((GlobalClass)context.getApplicationContext()).setItemInCart(si);
+                Toast.makeText(context,"Remove Successfully",Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(context, CartView.class);
                 context.startActivity(i);
 

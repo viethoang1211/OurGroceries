@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -57,6 +58,7 @@ public class ItemDetails extends AppCompatActivity {
             public void onClick(View v) {
                 allCartItems.add(new SaleItems(name,desc,price,quantity,unit,image));
                 ((GlobalClass)ItemDetails.this.getApplication()).setItemInCart(allCartItems);
+                Toast.makeText(ItemDetails.this,"ADD SUCCESSFULLY",Toast.LENGTH_SHORT).show();
             }
         });
 
