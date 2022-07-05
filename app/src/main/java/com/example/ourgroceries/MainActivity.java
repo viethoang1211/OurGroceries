@@ -47,22 +47,20 @@ public class MainActivity extends AppCompatActivity {
         mainCart=findViewById(R.id.mainCart);
         setting= findViewById(R.id.main_setting);
         branch= findViewById(R.id.main_branch);
-//>>>>>>> Stashed changes
-
-//        setting.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(MainActivity.this, SettingActivity.class);
-//                startActivity(i);
-//            }
-//        });
-//        branch.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(MainActivity.this, BranchList.class );
-//                startActivity(i);
-//            }
-//        });
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(i);
+            }
+        });
+        branch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, BranchList.class );
+                startActivity(i);
+            }
+        });
         allCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
