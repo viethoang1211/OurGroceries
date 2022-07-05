@@ -9,11 +9,9 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ourgroceries.MainActivity;
 import com.example.ourgroceries.R;
 import com.example.ourgroceries.model.DiscountedProducts;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DiscountedProductAdapter extends RecyclerView.Adapter<DiscountedProductAdapter.DiscountedProductViewHolder> {
@@ -50,7 +48,7 @@ public class DiscountedProductAdapter extends RecyclerView.Adapter<DiscountedPro
         ImageView discountImageView;
         public DiscountedProductViewHolder(@NonNull View itemView) {
             super(itemView);
-            discountImageView = itemView.findViewById(R.id.discountImage);
+            discountImageView = itemView.findViewById(R.id.cartImage);
 
         }
     }
